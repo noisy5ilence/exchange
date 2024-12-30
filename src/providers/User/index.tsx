@@ -1,7 +1,7 @@
 import { FC, ReactNode, useState } from 'react';
-import { User } from './models.ts';
 
 import UserContext from './context';
+import { User } from './models.ts';
 
 interface Props {
   children: ReactNode;

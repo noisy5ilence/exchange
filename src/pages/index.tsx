@@ -1,13 +1,14 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { FC, lazy, Suspense } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import paths from '@/pages/paths.ts';
-import Main from '@/layouts/Main';
+import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
+import Main from '@/layouts/Main';
+import paths from '@/pages/paths.ts';
 
 const Roles = lazy(() => import('./Roles'));
 const Transactions = lazy(() => import('./Transactions'));
-const CreateTransaction = lazy(() => import('./Transactions/components/CreateTransaction'));
+const CreateTransaction = lazy(() => import('./Transactions/pages/CreateTransaction'));
 const TransactionsProvider = lazy(() => import('@/providers/Transactions'));
 const Paydesk = lazy(() => import('./Paydesk'));
 const Currency = lazy(() => import('./Currency'));
@@ -24,11 +25,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    element: (
-      <Main>
-        <Navigation />
-      </Main>
-    ),
+    element: <Main header={<Header />} footer={<Navigation />} />,
     children: [
       {
         path: paths.transactions.path,

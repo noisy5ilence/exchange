@@ -2,16 +2,18 @@ import { FC, ReactNode } from 'react';
 import { Outlet } from 'react-router-dom';
 
 interface Props {
-  children?: ReactNode;
+  header?: ReactNode;
+  footer?: ReactNode;
 }
 
-const Main: FC<Props> = ({ children }) => {
+const Main: FC<Props> = ({ header, footer }) => {
   return (
-    <main className='max-w-[640px] p-2 flex flex-col flex-grow'>
-      <div className='flex flex-col flex-grow'>
+    <main className='flex max-w-[640px] flex-grow flex-col p-2'>
+      {header}
+      <div className='flex flex-grow flex-col'>
         <Outlet />
       </div>
-      {children}
+      {footer}
     </main>
   );
 };

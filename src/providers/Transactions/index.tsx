@@ -1,8 +1,9 @@
 import { FC, ReactNode, useState } from 'react';
-import { Transaction } from './models.ts';
+
 import transactions from '@/data/transactions.ts';
 
 import TransactionsContext from './context.ts';
+import { Transaction } from './models.ts';
 
 interface Props {
   children: ReactNode;

@@ -1,5 +1,5 @@
-import { Transaction, TransactionType } from '@/providers/Transactions/models.ts';
 import currencies from '@/data/currencies.ts';
+import { Transaction, TransactionType } from '@/providers/Transactions/models.ts';
 
 const transactions: Transaction[] = [
   {

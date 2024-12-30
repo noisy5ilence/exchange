@@ -1,7 +1,7 @@
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx';
-
-import pathsRecord from '@/pages/paths.ts';
 import { Link, useLocation } from 'react-router-dom';
+
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs.tsx';
+import pathsRecord from '@/pages/paths.ts';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { index, createTransaction, ...navigationPaths } = pathsRecord;

@@ -1,9 +1,10 @@
-import { Table as UITable, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Transaction, TransactionType } from '@/providers/Transactions/models.ts';
 import { FC } from 'react';
-import { transactionTypes } from '@/pages/Transactions/constants.ts';
+
+import { Table as UITable, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { currenciesRecord } from '@/data/currencies.ts';
 import { cn, formatDate } from '@/lib/utils.ts';
+import { transactionTypes } from '@/providers/Transactions/constants.ts';
+import { Transaction, TransactionType } from '@/providers/Transactions/models.ts';
 
 interface Props {
   transactions: Transaction[];
