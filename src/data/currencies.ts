@@ -1,15 +1,18 @@
 const currencies = [
   {
     id: 1,
-    name: 'UAH'
+    name: 'UAH',
+    amount: 100_000
   },
   {
     id: 2,
-    name: 'USD'
+    name: 'USD',
+    amount: 40_000
   },
   {
     id: 3,
-    name: 'EUR'
+    name: 'EUR',
+    amount: 30_000
   }
 ];
 

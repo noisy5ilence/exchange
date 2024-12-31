@@ -15,14 +15,14 @@ const Table: FC<Props> = ({ transactions }) => {
     <UITable>
       <TableHeader>
         <TableRow>
-          <TableHead className='text-nowrap'>Операція</TableHead>
-          <TableHead className='text-nowrap'>Валюта 1</TableHead>
-          <TableHead className='text-nowrap'>Сума 1</TableHead>
-          <TableHead className='text-nowrap'>Валюта 2</TableHead>
-          <TableHead className='text-nowrap'>Сума 2</TableHead>
-          <TableHead className='text-nowrap'>Курс</TableHead>
-          <TableHead className='text-nowrap'>Час</TableHead>
-          <TableHead className='text-nowrap'>Клієнт</TableHead>
+          <TableHead>Операція</TableHead>
+          <TableHead className='whitespace-nowrap text-nowrap'>Валюта 1</TableHead>
+          <TableHead className='whitespace-nowrap text-nowrap'>Сума 1</TableHead>
+          <TableHead className='whitespace-nowrap text-nowrap'>Валюта 2</TableHead>
+          <TableHead className='whitespace-nowrap text-nowrap'>Сума 2</TableHead>
+          <TableHead>Курс</TableHead>
+          <TableHead>Час</TableHead>
+          <TableHead>Клієнт</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -41,7 +41,7 @@ const Table: FC<Props> = ({ transactions }) => {
             <TableCell>{currenciesRecord[transaction.currency2]?.name}</TableCell>
             <TableCell>{transaction.sum2}</TableCell>
             <TableCell className='bg-yellow-500'>{transaction.rate}</TableCell>
-            <TableCell className='text-nowrap'>{formatDate(transaction.date)}</TableCell>
+            <TableCell className='whitespace-nowrap text-nowrap'>{formatDate(transaction.date)}</TableCell>
             <TableCell>{transaction.client}</TableCell>
           </TableRow>
         ))}

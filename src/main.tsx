@@ -4,12 +4,12 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import Router from '@/pages';
-import UserProvider from '@/providers/User';
+import Providers from '@/providers';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <UserProvider>
+    <Providers>
       <Router />
-    </UserProvider>
+    </Providers>
   </StrictMode>
 );

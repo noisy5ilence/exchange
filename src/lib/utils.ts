@@ -13,3 +13,10 @@ export const formatDate = (date: string) => {
     hour12: false
   }).format(new Date(date));
 };
+
+export const formatNumber = (number: number) =>
+  new Intl.NumberFormat('uk-UA', {
+    style: 'decimal',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(number);
