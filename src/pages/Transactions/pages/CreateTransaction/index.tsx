@@ -1,5 +1,7 @@
+import Form from './components/Form';
+
 const CreateTransaction = () => {
-  return 'CreateTransaction';
+  return <Form />;
 };
 
 export default CreateTransaction;
